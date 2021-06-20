@@ -5,4 +5,117 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+h1,
+h3,
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h3 {
+  color: #202046;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+p {
+  color: #babacf;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+  overflow: hidden;
+}
+
+body .imgBlock .img {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 0 3rem;
+  width: 375px;
+}
+
+body .imgBlock .img::before {
+  position: absolute;
+  content: "";
+  margin: 0 3rem;
+  top: -2rem;
+  left: -2rem;
+  right: -3rem;
+  bottom: -3rem;
+  background-image: url("../images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+body .imgBlock .img > img {
+  width: 100%;
+  -webkit-box-shadow: 5px 13px 27px -7px #202046;
+          box-shadow: 5px 13px 27px -7px #202046;
+}
+
+body .imgBlock .img button {
+  position: relative;
+  top: -1.3rem;
+  left: 6rem;
+  background-color: white;
+  height: 36px;
+  width: 40px;
+  -webkit-box-shadow: 5px 13px 27px -7px #202046;
+          box-shadow: 5px 13px 27px -7px #202046;
+  border: none;
+}
+
+body .imgBlock .img #btnPrev {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  left: 101px;
+}
+
+body .imgBlock .img #btnNext {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+body section {
+  margin: 3rem;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+body section h1 {
+  position: relative;
+  font-size: 1.3rem;
+}
+
+body section h1::before {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 38%;
+  top: -2rem;
+  left: 8.5rem;
+  background-image: url("../images/pattern-quotes.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body section h3 {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+body section p {
+  margin-top: 0.3rem;
+}
 /*# sourceMappingURL=main.css.map */

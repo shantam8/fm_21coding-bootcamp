@@ -1,12 +1,122 @@
 @import "fonts";
 @import "variables";
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    //    font-family: 'Inter', sans-serif; 3 5 7
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //    font-family: 'Inter', sans-serif; 3 5 7
 }
 
+h1,
+h3,
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
 
+h1,
+h3 {
+  color: $darkBlue;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+p {
+  color: $grayishBlue;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+
+  background-image: url("../images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+  overflow: hidden;
+
+  .imgBlock {
+    .img {
+      position: relative;
+      margin: 0 auto;
+      margin-top: 5rem;
+      padding: 0 3rem;
+      width: 375px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        margin: 0 3rem;
+        top: -2rem;
+        left: -2rem;
+        right: -3rem;
+        bottom: -3rem;
+        background-image: url("../images/pattern-bg.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -1;
+      }
+
+      & > img {
+        width: 100%;
+        box-shadow: 5px 13px 27px -7px $darkBlue;
+      }
+
+      button {
+        position: relative;
+        top: -1.3rem;
+        left: 6rem;
+        background-color: white;
+        height: 36px;
+        width: 40px;
+        box-shadow: 5px 13px 27px -7px $darkBlue;
+        border: none;
+      }
+
+      #btnPrev {
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        left: 101px;
+      }
+      #btnNext {
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+      }
+    }
+  }
+
+  section {
+    margin: 3rem;
+    margin-top: 5rem;
+    text-align: center;
+
+    h1 {
+      position: relative;
+      font-size: 1.3rem;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 20%;
+        height: 38%;
+        top: -2rem;
+        left: 8.5rem;
+        background-image: url("../images/pattern-quotes.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    h3 {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    p {
+      margin-top: 0.3rem;
+    }
+  }
+}
