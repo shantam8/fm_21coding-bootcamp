@@ -224,4 +224,8 @@ body section p {
     display: inline-block;
   }
 }
+
+body #sect2 {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */
