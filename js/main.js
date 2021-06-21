@@ -8,11 +8,11 @@ function toggleDisplay() {
   if (section1.style.display == "none") {
     section1.style.display = "block";
     section2.style.display = "none";
-    userAvatar.src = "../images/image-tanya.jpg";
+    userAvatar.src = "./images/image-tanya.jpg";
   } else {
     section1.style.display = "none";
     section2.style.display = "block";
-    userAvatar.src = "../images/image-john.jpg";
+    userAvatar.src = "./images/image-john.jpg";
   }
 }
 
