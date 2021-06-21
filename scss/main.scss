@@ -30,7 +30,7 @@ p {
 
 body {
   position: relative;
-  height: 100vh;
+  height: 91vh;
 
   background-image: url("../images/pattern-curve.svg");
   background-repeat: no-repeat;
@@ -38,7 +38,20 @@ body {
   background-position-y: bottom;
   overflow: hidden;
 
+  @media screen and( min-width:64rem) {
+    width: 90%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
   .imgBlock {
+    @media screen and (min-width: 64rem) {
+      width: 40%;
+      transform: scale(1.7);
+    }
     .img {
       position: relative;
       margin: 0 auto;
@@ -46,7 +59,12 @@ body {
       padding: 0 3rem;
       width: 375px;
 
+      @media screen and( min-width:64rem) {
+        margin: unset;
+      }
+
       &::before {
+        //background image
         position: absolute;
         content: "";
         margin: 0 3rem;
@@ -58,6 +76,13 @@ body {
         background-repeat: no-repeat;
         background-size: contain;
         z-index: -1;
+
+        @media screen and( min-width:64rem) {
+          top: -3rem;
+          left: -3rem;
+          bottom: -3rem;
+          right: -3rem;
+        }
       }
 
       & > img {
@@ -65,22 +90,41 @@ body {
         box-shadow: 5px 13px 27px -7px $darkBlue;
       }
 
-      button {
+      .buttonWrapper {
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: -1.3rem;
-        left: 6rem;
-        background-color: white;
-        height: 36px;
-        width: 40px;
-        box-shadow: 5px 13px 27px -7px $darkBlue;
-        border: none;
+
+        @media screen and( min-width:64rem) {
+          width: 50%;
+        }
+
+        button {
+          background-color: white;
+          height: 36px;
+          width: 40px;
+          box-shadow: 5px 13px 27px -7px $darkBlue;
+          border: none;
+          transition: background-color 0.3s ease-in;
+
+          &:hover,
+          &:focus {
+            background-color: turquoise;
+          }
+
+          &:active {
+            background-color: $darkBlue;
+          }
+        }
       }
 
       #btnPrev {
         border-top-left-radius: 50%;
         border-bottom-left-radius: 50%;
-        left: 101px;
       }
+
       #btnNext {
         border-top-right-radius: 50%;
         border-bottom-right-radius: 50%;
@@ -89,34 +133,62 @@ body {
   }
 
   section {
-    margin: 3rem;
+    margin: 3rem auto;
     margin-top: 5rem;
+    padding: 0 3rem;
+    width: 375px;
     text-align: center;
+
+    @media screen and( min-width:64rem) {
+      text-align: left;
+      margin: unset;
+      padding: unset;
+      width: 50%;
+    }
 
     h1 {
       position: relative;
       font-size: 1.3rem;
 
+      @media screen and (min-width: 64rem) {
+        font-size: 1.8rem;
+      }
+
       &::before {
+        //quotes icon
         position: absolute;
         content: "";
         width: 20%;
         height: 38%;
         top: -2rem;
-        left: 8.5rem;
+        left: 7.5rem;
         background-image: url("../images/pattern-quotes.svg");
         background-size: contain;
         background-repeat: no-repeat;
+
+        @media screen and (min-width: 64rem) {
+          top: -3rem;
+          left: 5.5rem;
+        }
       }
     }
 
     h3 {
       margin-top: 2rem;
       font-size: 1rem;
+      
+      @media screen and (min-width: 64rem) {
+        display: inline-block;
+        font-size: 1.1rem;
+      }
     }
 
     p {
       margin-top: 0.3rem;
+
+      @media screen and (min-width: 64rem) {
+        display: inline-block;
+      }
     }
   }
 }

@@ -28,12 +28,40 @@ p {
 
 body {
   position: relative;
-  height: 100vh;
+  height: 91vh;
   background-image: url("../images/pattern-curve.svg");
   background-repeat: no-repeat;
   background-position-x: left;
   background-position-y: bottom;
   overflow: hidden;
+}
+
+@media screen and (min-width: 64rem) {
+  body {
+    width: 90%;
+    margin: 3rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  body .imgBlock {
+    width: 40%;
+    -webkit-transform: scale(1.7);
+            transform: scale(1.7);
+  }
 }
 
 body .imgBlock .img {
@@ -42,6 +70,12 @@ body .imgBlock .img {
   margin-top: 5rem;
   padding: 0 3rem;
   width: 375px;
+}
+
+@media screen and (min-width: 64rem) {
+  body .imgBlock .img {
+    margin: unset;
+  }
 }
 
 body .imgBlock .img::before {
@@ -58,28 +92,63 @@ body .imgBlock .img::before {
   z-index: -1;
 }
 
+@media screen and (min-width: 64rem) {
+  body .imgBlock .img::before {
+    top: -3rem;
+    left: -3rem;
+    bottom: -3rem;
+    right: -3rem;
+  }
+}
+
 body .imgBlock .img > img {
   width: 100%;
   -webkit-box-shadow: 5px 13px 27px -7px #202046;
           box-shadow: 5px 13px 27px -7px #202046;
 }
 
-body .imgBlock .img button {
+body .imgBlock .img .buttonWrapper {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: -1.3rem;
-  left: 6rem;
+}
+
+@media screen and (min-width: 64rem) {
+  body .imgBlock .img .buttonWrapper {
+    width: 50%;
+  }
+}
+
+body .imgBlock .img .buttonWrapper button {
   background-color: white;
   height: 36px;
   width: 40px;
   -webkit-box-shadow: 5px 13px 27px -7px #202046;
           box-shadow: 5px 13px 27px -7px #202046;
   border: none;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+
+body .imgBlock .img .buttonWrapper button:hover, body .imgBlock .img .buttonWrapper button:focus {
+  background-color: turquoise;
+}
+
+body .imgBlock .img .buttonWrapper button:active {
+  background-color: #202046;
 }
 
 body .imgBlock .img #btnPrev {
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
-  left: 101px;
 }
 
 body .imgBlock .img #btnNext {
@@ -88,14 +157,31 @@ body .imgBlock .img #btnNext {
 }
 
 body section {
-  margin: 3rem;
+  margin: 3rem auto;
   margin-top: 5rem;
+  padding: 0 3rem;
+  width: 375px;
   text-align: center;
+}
+
+@media screen and (min-width: 64rem) {
+  body section {
+    text-align: left;
+    margin: unset;
+    padding: unset;
+    width: 50%;
+  }
 }
 
 body section h1 {
   position: relative;
   font-size: 1.3rem;
+}
+
+@media screen and (min-width: 64rem) {
+  body section h1 {
+    font-size: 1.8rem;
+  }
 }
 
 body section h1::before {
@@ -104,10 +190,17 @@ body section h1::before {
   width: 20%;
   height: 38%;
   top: -2rem;
-  left: 8.5rem;
+  left: 7.5rem;
   background-image: url("../images/pattern-quotes.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 64rem) {
+  body section h1::before {
+    top: -3rem;
+    left: 5.5rem;
+  }
 }
 
 body section h3 {
@@ -115,7 +208,20 @@ body section h3 {
   font-size: 1rem;
 }
 
+@media screen and (min-width: 64rem) {
+  body section h3 {
+    display: inline-block;
+    font-size: 1.1rem;
+  }
+}
+
 body section p {
   margin-top: 0.3rem;
+}
+
+@media screen and (min-width: 64rem) {
+  body section p {
+    display: inline-block;
+  }
 }
 /*# sourceMappingURL=main.css.map */
